@@ -7,11 +7,12 @@ const sound = new Audio("images/assets_smash.mp3")
 function run(){
     const i = Math.floor(Math.random() * holes.length)
     const hole = holes[i]
-    let timer = null
+    let timer = null;
 
     const img = document.createElement("img")
-    img.classList.add("mole")
-    img.src = "images/mole.png"
+    img.classList.add("mole", "bomb")
+    img.src = "images/mole.png", "images/bomb.png"
+
 
     img.addEventListener("click", () => {
         score += 10
@@ -32,6 +33,7 @@ function run(){
         hole.removeChild(img)
         run()
     }, 1500)
+    
 }
 run()
 

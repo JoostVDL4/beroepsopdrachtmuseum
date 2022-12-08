@@ -45,7 +45,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    animation: rise .3s ease-out;
+    animation: rise .3s ease-out;    
 }
 @keyframes rise {
     0%{
