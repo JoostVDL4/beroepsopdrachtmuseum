@@ -20,15 +20,15 @@ a {
     padding: 15px 60px;
     font-size: 1.1rem;
     text-transform: uppercase;
-    background: #111;
-    color: #eee;
+    background: #eee;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     transition: background 500ms ease;
 }
 
 .btn:hover {
     cursor: pointer;
-    background: #000;
+    background: rgb(136, 136, 136);
 }
 
 .headline {
@@ -58,18 +58,31 @@ a {
     align-items: center;
 }
 
-#navbar-items {
+#navbar-items{
     display: flex;
     list-style: none;
     text-transform: uppercase;
+    gap: 10px;
 }
 
 #navbar-items li {
-    padding: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .4s;
 }
 
-#navbar-items li:hover {
+#navbar-items a{
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: block;
+}
+
+#navbar-items > li:hover {
+    cursor: pointer;
     background-color: rgb(136, 136, 136);
 }
 
@@ -80,7 +93,7 @@ a {
     justify-content: center;
     align-items: center;
     color: #eee;
-    background: url('/img/Museum.png') no-repeat center center/cover;
+    background: url('/img/museum4.jpeg') no-repeat center center/cover;
 
     /* Overlay */
     background-color: rgba(0,0,0,0.5);
@@ -145,7 +158,7 @@ a {
     width: 100%;
     background: #222;
     color: #eee;
-    padding: 100px;
+    padding: 50px;
 }
 
 #reviews-container {
@@ -164,9 +177,81 @@ a {
 }
 
 /* Footer */
-#footer {
-    background: rgb(11, 11, 11);
-    color: rgb(255, 255, 255);
-    padding: 30px;
-    text-align: center;
+.container {
+    max-width: 1170px;
+    margin: auto;
+    
 }
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+ul{
+    list-style: none;
+    color: #ffffff;
+}
+
+.footer {
+    background: rgb(11, 11, 11);
+    padding: 70px 0
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
